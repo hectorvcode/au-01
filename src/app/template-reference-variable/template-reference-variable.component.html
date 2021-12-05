@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="column">
+      <h2>Template Reference Variable</h2>
+      <p>
+        You can also use the template reference variable to create a template
+        variable #name to an input box, and you can use it get the value of the
+        input field <br />
+        &#123; &#123; name.value &#125; &#125;
+      </p>
+      <div>
+        <label for="">Enter your Name</label>
+        <input (keyup)="(0)" #name />
+        <p>Welcome {{ name.value }}</p>
+      </div>
+      <p>
+        We also use (keyup)='0' on the input element. Angular updates the view,
+        when it runs the change detection. The change detection runs only in
+        response to asynchronous events.
+      </p>
+      <p>
+          A template reference variable is ofter a reference to a DOM element within
+          a template. You can easily access the variable anywhere in the template.
+          You declare it by using the hash symbol(#)
+      </p>
+
+    </div>
+  </div>
+</div>

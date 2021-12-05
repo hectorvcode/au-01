@@ -4,3 +4,11 @@
     Edad: {{ edad +1 }} 
     <!-- Edad: {{ getEdad() }} -->
 </p>
+
+<p>Template Reference Variable</p>
+
+<div (keyup)='0'>
+    <label for="">Repetidor: </label>
+    <input type="text" #entrada />
+    {{ entrada.value }}
+</div>

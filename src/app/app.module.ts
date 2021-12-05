@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { PersonasComponent } from './personas/personas.component';
 import { PersonaComponent } from './persona/persona.component';
 import { InterpolationComponent } from './interpolation/interpolation.component';
+import { TemplateReferenceVariableComponent } from './template-reference-variable/template-reference-variable.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonasComponent,
     PersonaComponent,
-    InterpolationComponent
+    InterpolationComponent,
+    TemplateReferenceVariableComponent
   ],
   imports: [
     BrowserModule,
