@@ -1,0 +1,150 @@
+<div class="container">
+  <div class="col">
+    <div class="row">
+      <h2>Displaying values with interpolation</h2>
+
+      <p>
+        Interpolation refers to embedding expressions into marked up text. By
+        default, interpolation uses the double curl braces &#123; &#123; and
+        &#125; &#125; as delimiters. To ilustrate how it works, lets declare a
+        variable into component.ts file: currentCustomer = 'Hector' Then we can
+        use interpolation to display the value of this variable in the
+        corresponding component template as follows:
+      </p>
+
+      <h5>Current Customer: {{ currentCustomer }}</h5>
+
+      <p>We can use interpolation to pass an url by using the same process</p>
+
+      <h4>Inserting image by using iterpolation</h4>
+      <div>
+        <img src="{{ itemImageUrl }}" alt="Angular Logo" />
+      </div>
+
+      <h2>Examples</h2>
+
+      <h4>Invoke a method in the component</h4>
+      <div>
+        In the template we get the senority bye the method
+        <pre>getSenority()</pre>
+        <strong>
+          {{ getSenority() }}
+        </strong>
+      </div>
+
+      <h4>Concatenate two string</h4>
+      <p>
+        Welcome to <strong>{{ title }}</strong>
+      </p>
+      <p>Hello, {{ firstName }} {{ lastName }}</p>
+
+      <h4>Perform some mathematical operations</h4>
+      <p>100 x 80 = {{ 100 * 80 }}</p>
+      <p>Largest: {{ max(100, 200) }}</p>
+
+      <h4>Bind to an element property</h4>
+      <p>
+        We can use it to bind to a property of the HTML element, compoenent or
+        directive In the following example we bind to the style.color property
+        of the paragraph element. We can bind to any property that accepts a
+        string
+      </p>
+      <p>Show me <span class=" {{ colorRed }}">Red Color</span></p>
+      <p style.color="{{ colorRed }}">This is red</p>
+
+      <h4>Cross-site Scripting or XSS</h4>
+      <p>
+        Angular sanitizes everything before inserting into DOM, thus preventing
+        Cross-Site Scripting Security bugs. For example values from the
+        compoenent property
+      </p>
+      <p>{{ script }}</p>
+      <p>{{ div }}</p>
+      <p>
+        The script in the following example is not invoked but shown as it is.
+      </p>
+      <h4>NgNonBindable</h4>
+      <p>
+          Use it to tell Angular not to compile or bind the contents of the
+          current DOM element. Any expressino is not evaluatec but shown as it is
+      </p>
+      <p>Evaluate: {{ variable }}</p>
+      <p ngNonBindable>Do not evaluate: {{ variable }}</p>
+      <h4>Use Pipes</h4>
+      <p>
+          You can use Angular Pipes to transform the expression result. Like converting
+          to an uppercase, date formats, adding currency symbols, etc
+      </p>
+      <p>uppercase pipe: {{ title | uppercase }}</p>
+      <p>pipe chain: {{ title | uppercase | lowercase }}</p>
+      <p>json pipe: {{ items | json }}</p>
+      
+
+      <h2>Template Expressions</h2>
+
+      <p>
+        A template expression produces a velue and appears within double curly
+        braces &#123; &#123; &#125; &#125; Angular resolvers the expression and
+        assigns it to a property of a binding target. The target could be an
+        HTML element, component or directive
+      </p>
+
+      <h4>Resolving expressions with interpolation</h4>
+
+      <p>
+        The text between the braces is a template expression that Angular first
+        evaluates and then converts to a string. The following example
+        illustrates this:
+      </p>
+
+      <p>The sum or 1 + 1 is &#123; &#123; 1 + 1 &#125; &#125;</p>
+
+      <p>The sum of 1 + 1 is {{ 1 + 1 }}</p>
+
+      <div>
+        With interpolation, Angular performs the following tasks:
+        <ol>
+          <li>Evaluates all expressions in double curly braces</li>
+          <li>Converts the expression results to strings</li>
+          <li>Links the results to any adjacent literal strings</li>
+          <li>Assigns the composite to an element or directive property</li>
+        </ol>
+      </div>
+
+      <h4>Interpolation is one-way binding</h4>
+      <p>
+        Interpolation is one way as values go from the component to the
+        template, but if you try to change values in the view, the component is
+        not updated
+      </p>
+      <h4>Should not change the state of the app</h4>
+      <p>
+        The template expression should not change the state of the app. Angular
+        uses it to read the values from the compoenent and populate the view. If
+        the template change component values, the rendered view will be
+        inconsistent with the model.
+      </p>
+      <div>
+        It means you can't make use of the following
+        <ul>
+          <li>Assignments(=,+=,-=,...)</li>
+          <li>Keywords line new, typeof, instanceof, etc</li>
+          <li>Chaining expressions with ; or ,</li>
+          <li>The increment and decrement operators ++ and --</li>
+          <li>bitwise operatiors such as | and &</li>
+        </ul>
+      </div>
+      <h4>The expression must result in a string</h4>
+      <p>
+        If we return an object it will not work. If you want to bind the
+        expression that is other than a string, then property binding is the
+        best option
+      </p>
+      <h4>Works only on properties and not attributes</h4>
+      <p>
+        This can set only properties, not attributes. For Atttributes you should
+        use attribute binding
+      </p>
+    </div>
+  </div>
+</div>

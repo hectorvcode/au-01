@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PersonasComponent } from './personas/personas.component';
 import { PersonaComponent } from './persona/persona.component';
+import { InterpolationComponent } from './interpolation/interpolation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonasComponent,
-    PersonaComponent
+    PersonaComponent,
+    InterpolationComponent
   ],
   imports: [
     BrowserModule,
