@@ -12,6 +12,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonasComponent implements OnInit {
 
+  deshabilitar = false;
+
   constructor() { }
 
   ngOnInit(): void {

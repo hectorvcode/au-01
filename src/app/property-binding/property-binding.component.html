@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2>Property binding</h2>
+      <p>
+        Property binding in Angular helps you set values for properties of HTML
+        elements or directives. Use property binding to do things such as toggle
+        button functionality, set paths programmatically and share values
+        between components.
+      </p>
+      <p>
+        To bind to an element's property, enclose it in square brackets, [ ],
+        which identifies the property as a target property. A target property is
+        the DOM property to which you want to assign a value. For example, the
+        target property in the following code is the element's
+        <strong>src</strong> property.
+      </p>
+      <div>
+        <pre>
+            <code>
+                <span>img</span> <span>[</span> <span>src</span> <span>]</span> <span>=</span> <span>"itemImageUrl"</span>
+            </code>
+        </pre>
+      </div>
+
+      <h3>Example</h3>
+      <p>Binding the src property of an image html tag</p>
+      <img [src]="angularImageUrl" alt="item image" />
+      <hr />
+      <p>Binding the colSpan property of a table</p>
+      <tr>
+        <td [colSpan]="1 + 1">Three-Four</td>
+      </tr>
+      <hr />
+      <p>Binding the class property of an html element</p>
+      <p [innerHTML]="nameDetails"></p>
+      <hr />
+      <h3>DOM Properties, not attributes</h3>
+      <p>
+        The property binding binds to the properties of DOM elements,
+        componentes and directives and not to HTML attributes. Angular has a
+        special syntax for attribute binding
+      </p>
+
+      <h2>Conclution</h2>
+      <p>
+        Understanding Angular's data bingding types is impoertant when building
+        Angular applications. With this knowledge you can properly utilize the
+        data binding method most suitable for the task at hand.
+      </p>
+    </div>
+  </div>
+</div>

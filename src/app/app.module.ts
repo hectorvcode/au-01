@@ -7,6 +7,7 @@ import { PersonasComponent } from './personas/personas.component';
 import { PersonaComponent } from './persona/persona.component';
 import { InterpolationComponent } from './interpolation/interpolation.component';
 import { TemplateReferenceVariableComponent } from './template-reference-variable/template-reference-variable.component';
+import { PropertyBindingComponent } from './property-binding/property-binding.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { TemplateReferenceVariableComponent } from './template-reference-variabl
     PersonasComponent,
     PersonaComponent,
     InterpolationComponent,
-    TemplateReferenceVariableComponent
+    TemplateReferenceVariableComponent,
+    PropertyBindingComponent
   ],
   imports: [
     BrowserModule,
