@@ -8,6 +8,7 @@ import { PersonaComponent } from './persona/persona.component';
 import { InterpolationComponent } from './interpolation/interpolation.component';
 import { TemplateReferenceVariableComponent } from './template-reference-variable/template-reference-variable.component';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PropertyBindingComponent } from './property-binding/property-binding.co
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
